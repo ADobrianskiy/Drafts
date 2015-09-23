@@ -39,10 +39,20 @@ public class Board {
         }
     }
 
-    public void makeTurn(Turn black_turn) {
-        /*
-        Code for make Turn method
-         */
+    public void makeTurn(Move[] moves) throws Exception {
+        for(Move move : moves){
+            Pair from = move.getFrom();
+            Pair to = move.getTo();
+
+            if (elements[from.first][from.second] == GameElement.NONE ||
+                    elements[to.first][to.second] != GameElement.NONE) {
+                throw new Exception("BAD MOVE:" + move + "\nfor board\n" + toString());
+            }
+
+            GameElement e = elements[from.first][from.second];
+            elements[from.first][from.second] = GameElement.NONE;
+            elements[to.first][to.second] = e;
+        }
     }
 
     public GameElement getElement(int i, int j) {

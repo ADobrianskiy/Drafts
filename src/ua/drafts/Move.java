@@ -14,4 +14,24 @@ public class Move {
         this.from = from;
         this.to = to;
     }
+
+    public PlayerType getPlayer() {
+        return player;
+    }
+
+    public Pair getFrom() {
+        return from;
+    }
+
+    public void setFrom(Pair from) {
+        this.from = from;
+    }
+
+    public Pair getTo() {
+        return to;
+    }
+
+    public void setTo(Pair to) {
+        this.to = to;
+    }
 }
