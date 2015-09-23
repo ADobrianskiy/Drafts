@@ -4,7 +4,15 @@ package ua.drafts;
  * Created by adobrianskiy on 22.09.15.
  */
 public class Board {
+
+    private final int BOARD_SIZE = 8;
+
     public GameElement[][] elements;
+
+    public int getBOARD_SIZE() {
+        return BOARD_SIZE;
+    }
+
     public Board(){
         elements = new GameElement[8][8];
 
@@ -39,7 +47,7 @@ public class Board {
         }
     }
 
-    public void makeTurn(Turn black_turn) {
+    public void makeTurn(Move black_turn) {
         /*
         Code for make Turn method
          */
