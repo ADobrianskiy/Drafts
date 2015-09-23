@@ -6,7 +6,7 @@ package ua.drafts;
 public class Board {
     public GameElement[][] elements;
     public Board(){
-        elements = new GameElement[7][7];
+        elements = new GameElement[8][8];
 
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
@@ -18,18 +18,18 @@ public class Board {
     }
 
     private void initBlack(){
-        for(int i = 1; i < 7; i++){
+        for(int i = 0; i < 8; i++){
             if(i%2 == 0){
                 elements[i][1] = GameElement.BLACK;
             } else {
                 elements[i][0] = GameElement.BLACK;
-                elements[i][3] = GameElement.BLACK;
+                elements[i][2] = GameElement.BLACK;
             }
         }
     }
 
     private void initWhite(){
-        for(int i = 1; i < 7; i++){
+        for(int i = 0; i < 8; i++){
             if(i%2 != 0){
                 elements[i][6] = GameElement.WHITE;
             } else {
@@ -50,5 +50,34 @@ public class Board {
             return null;
         }
         return elements[i][j];
+    }
+
+    public String toString() {
+        String res = "";
+        for(int i = 0; i < elements.length; i++){
+            for(int j = elements.length - 1; j >= 0; j--){
+                GameElement e = getElement(i, j);
+                switch (e){
+                    case WHITE:
+                        res += "w";
+                        break;
+                    case BLACK:
+                        res += "b";
+                        break;
+                    case WHITE_EXTENDED:
+                        res += "W";
+                        break;
+                    case BLACK_EXTENDED:
+                        res += "B";
+                        break;
+                    case NONE:
+                        res += "_";
+                        break;
+                }
+                res += " ";
+            }
+            res += "\n";
+        }
+        return res;
     }
 }
