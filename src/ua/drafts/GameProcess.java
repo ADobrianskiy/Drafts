@@ -23,7 +23,7 @@ public class GameProcess {
 
     private void startGame() {
 //        while(getState(board) != GameState.PLAYING){
-        while (!isFinished()){
+/*        while (!isFinished()){
             Move white_turn = white.getTurn(board);
             board.makeTurn(white_turn);
             if(getState(board) != GameState.PLAYING){
@@ -32,6 +32,7 @@ public class GameProcess {
             Move black_turn = black.getTurn(board);
             board.makeTurn(black_turn);
         }
+        */
     }
 
     private GameState getState(Board board) {

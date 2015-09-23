@@ -11,7 +11,7 @@ public class Main {
         Board board = new Board();
         DraftBot df = new DraftBot(PlayerType.BLACK_PLAYER);
         df.getMove(board);
-
+    
         //System.out.println(board);
         //GameProcess gm = new GameProcess(white, black);
     }
