@@ -1,5 +1,6 @@
 package ua.drafts;
 
+import static ua.drafts.GameElement.BLACK;
 import static ua.drafts.GameElement.WHITE;
 
 /**
@@ -61,22 +62,49 @@ public class GameProcess {
                 }
             }
         }
+         /*
+        * STATE ????
+        * */
         return null;
     }
 
     private boolean checkBlackExtended(int i, int j) {
+        if(board.getElement(i,j) != GameElement.BLACK_EXTENDED){
+            return false;
+        }
+        /*
+        * Method body here
+        * */
         return false;
     }
 
     private boolean checkWhiteExtended(int i, int j) {
+        if(board.getElement(i,j) != GameElement.WHITE_EXTENDED){
+            return false;
+        }
+         /*
+        * Method body here
+        * */
         return false;
     }
 
     private boolean checkBlack(int i, int j) {
+        if(board.getElement(i,j) != GameElement.BLACK){
+            return false;
+        }
+         /*
+        * Method body here
+        * */
         return false;
     }
 
     private boolean checkWhite(int i, int j) {
+        if(board.getElement(i,j) != GameElement.WHITE){
+            return false;
+        }
+         /*
+        * Method body here
+        * */
         return false;
     }
 }
