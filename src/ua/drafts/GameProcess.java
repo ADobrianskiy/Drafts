@@ -19,15 +19,15 @@ public class GameProcess {
     }
 
     private void startGame() {
-        while(getState(board) != GameState.PLAYING){
-            Turn white_turn = white.getTurn(board);
+        /*while(getState(board) != GameState.PLAYING){
+            Move white_turn = white.getMove(board);
             board.makeTurn(white_turn);
             if(getState(board) != GameState.PLAYING){
                 return;
             }
             Turn black_turn = black.getTurn(board);
             board.makeTurn(black_turn);
-        }
+        }*/
     }
 
     private GameState getState(Board board) {
