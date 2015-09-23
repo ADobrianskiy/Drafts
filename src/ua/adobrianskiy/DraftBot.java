@@ -10,7 +10,7 @@ import ua.drafts.Move;
 public class DraftBot implements Client {
 
     @Override
-    public Move getTurn(Board board) {
+    public Move[] getMove(Board board) {
         return null;
     }
 }
