@@ -2,7 +2,7 @@ package ua.adobrianskiy;
 
 import ua.drafts.Board;
 import ua.drafts.Client;
-import ua.drafts.Turn;
+import ua.drafts.Move;
 
 /**
  * Created by adobrianskiy on 23.09.15.
@@ -10,7 +10,7 @@ import ua.drafts.Turn;
 public class DraftBot implements Client {
 
     @Override
-    public Turn getTurn(Board board) {
+    public Move getTurn(Board board) {
         return null;
     }
 }
