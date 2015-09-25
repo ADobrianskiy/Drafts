@@ -4,13 +4,12 @@ package ua.drafts;
  * Created by Dima on 23.09.2015.
  */
 public class Pair {
-    public int firstX;
-    public int firstY;
-    public int secondX;
-    public int secondY;
+    public int first;
+    public int second;
 
-    public Pair (int firstX, int firstY, int secondX, int secondY){
-        this.firstX = firstX; this.firstY = firstY;
-        this.secondX = secondX; this.secondY = secondY;
+
+    public Pair (int first, int second){
+        this.first = first;
+        this.second = second;
     }
 }

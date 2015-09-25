@@ -1,5 +1,7 @@
 package ua.drafts;
 
+import java.util.List;
+
 import static ua.drafts.GameElement.BLACK;
 import static ua.drafts.GameElement.WHITE;
 
@@ -24,7 +26,9 @@ public class GameProcess {
     private void startGame() {
 //        while(getState(board) != GameState.PLAYING){
         while (!isFinished()){
-            Move[] white_turn = white.getMove(board);
+            List<Move> white_turn = white.getMove(board);
+/*        while (!isFinished()){
+            Move white_turn = white.getTurn(board);
             board.makeTurn(white_turn);
             if(getState(board) != GameState.PLAYING){
                 return;
@@ -32,6 +36,8 @@ public class GameProcess {
             Move[] black_turn = black.getMove(board);
             board.makeTurn(black_turn);
         }
+        */
+    }
     }
 
     private GameState getState(Board board) {
