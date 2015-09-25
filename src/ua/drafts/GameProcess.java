@@ -24,12 +24,12 @@ public class GameProcess {
     private void startGame() {
 //        while(getState(board) != GameState.PLAYING){
         while (!isFinished()){
-            Move white_turn = white.getTurn(board);
+            Move[] white_turn = white.getMove(board);
             board.makeTurn(white_turn);
             if(getState(board) != GameState.PLAYING){
                 return;
             }
-            Move black_turn = black.getTurn(board);
+            Move[] black_turn = black.getMove(board);
             board.makeTurn(black_turn);
         }
     }

@@ -21,28 +21,26 @@ public class Board {
     }
 
     private void initBlack(){
-        for(int i = 0; i < 8; i++){
-            if(i%2 == 0){
-                elements[i][1] = GameElement.BLACK;
-            } else {
-                elements[i][0] = GameElement.BLACK;
-                elements[i][2] = GameElement.BLACK;
-            }
+        int i = 1;
+
+        for(int j = 0; i < 8; j+=2){
+            elements[i][j] = GameElement.BLACK;
+            elements[i-1][j+1] = GameElement.BLACK;
+            elements[i+1][j+1] = GameElement.BLACK;
         }
     }
 
     private void initWhite(){
-        for(int i = 0; i < 8; i++){
-            if(i%2 != 0){
-                elements[i][6] = GameElement.WHITE;
-            } else {
-                elements[i][7] = GameElement.WHITE;
-                elements[i][5] = GameElement.WHITE;
-            }
+        int i = 6;
+
+        for(int j = 7; j > 0; j-=2){
+            elements[i][j] = GameElement.WHITE;
+            elements[i-1][j-1] = GameElement.WHITE;
+            elements[i+1][j-1] = GameElement.WHITE;
         }
     }
 
-    public void makeTurn(Move black_turn) {
+    public void makeTurn(Move[] black_turn) {
         /*
         Code for make Turn method
          */
